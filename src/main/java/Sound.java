@@ -15,8 +15,16 @@ public class Sound
    */
   public int limitAmplitude(int limit)
   {  
-    /* to be implemented in part (a) */
-    return 0;
+  int a = 0;
+  for(int i = 0; i < limit.length; i++){
+    if(samples[i] > limit)
+      samples[i] = limit;
+      a++;
+    else if(samples[i] < -limit)
+      samples[i] = -limit;
+      a++;
+  }
+return a;
   }
 
 
